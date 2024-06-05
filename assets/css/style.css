@@ -19,11 +19,14 @@ body {
 }
 #H1 {
     font-family: 'Oswald', sans-serif;
-}
+    }
 header {
-    background-color: lightcoral;
-
-}
+    background-color: #ffffff;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    }
 main {
     background-color: lightblue;
     /* Make main element take up any surplus space to push footer down */

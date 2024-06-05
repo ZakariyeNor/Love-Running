@@ -19,6 +19,9 @@ body {
 }
 #H1 {
     font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
     }
 header {
     background-color: #ffffff;
@@ -35,4 +38,8 @@ main {
 }
 footer {
     background-color: orange;
+}
+header a {
+    text-decoration: none;
+    color: inherit;
 }

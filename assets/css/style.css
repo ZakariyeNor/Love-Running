@@ -95,15 +95,21 @@ nav {
         #menu > li {
             padding-left: 1rem;
         }
+        .nav-toggle-label {
+            display: none; 
+    }
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin:0 0.5rem;
+    }
+    /* MAin content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
+    }
 }
-.nav-toggle-label {
-        display: none; 
-}
-#logo {
-    font-size: 280%;
-    line-height: 75px;
-    margin:0 0.5rem;
-}
+
 /* Media query: laptop and larger (992px and up) */
 @media screen and (min-width: 992px;) {
     /* Menu */

@@ -40,8 +40,17 @@ main {
     flex: 1 0 auto;
     margin-top: 47px;
 }
-footer {
-    background-color: orange;
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
 }
 header a {
     text-decoration: none;
@@ -52,7 +61,7 @@ header a {
     letter-spacing: 4px;
     list-style-type: none;
 }
-#menu li {
+#menu > li {
     margin-bottom: 1em;
 }
 .active {
@@ -111,7 +120,7 @@ nav {
 }
 
 /* Media query: laptop and larger (992px and up) */
-@media screen and (min-width: 992px;) {
+@media screen and (min-width: 992px) {
     /* Menu */
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;

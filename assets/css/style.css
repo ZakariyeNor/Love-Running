@@ -52,7 +52,7 @@ header a {
     list-style-type: none;
 }
 
-#menu>li {
+#menu > li {
     margin-bottom: 1em;
 }
 
@@ -84,12 +84,15 @@ nav {
 .nav-toggle-label {
     font-size: 2rem;
 }
-
-
+/* Main content */
 main {
-    /* Make main element take up any surplus space to push footer down */
+    /* Enlage main element to push footer down */
     flex: 1 0 auto;
+    /* Add margin at the top to prevent content from being covered by the header */
     margin-top: 47px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Hero section */
@@ -113,8 +116,8 @@ main {
 
 }
 
-#cover-text>h2,
-#cover-text>h3 {
+#cover-text > h2,
+#cover-text > h3 {
     color: #ffffff;
 }
 #times {
@@ -202,7 +205,62 @@ main {
         line-height: 75px;
         margin: 0 0.5rem;
     }
-
+    #signup {
+        background-position: center;
+        position: relative;
+    }
+    #signup-form {
+        position: absolute;
+        max-width: 400px;
+        margin-top: 150px;
+        margin-left: 10%;
+    }
+    .text-input:hover {
+        border-color: #f16c6b;
+    }
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
+    }
+}
+/* Main content */
+#signup {
+    background-image: url(assets/images/signup-image.webp);
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10px 0 10px;
+}
+#signup-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, .6);
+    padding: 30px;
+}
+#signup-form > h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+    height: 25px;
+    margin: 5px 0 20px 0;
+}
+.radio-buttons {
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+}
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    background-color: #454b1b;
+    color: #fafafa;
+    font-size: 100%;
+}
     /* Main content */
     main {
         /* Push main content down to accommodate larger header */
@@ -236,8 +294,6 @@ main {
     #photos {
         column-count: 3;
     }
-}
-
 /* Media query: laptop and larger (992px and up) */
 @media screen and (min-width: 992px) {
 

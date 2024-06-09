@@ -41,6 +41,51 @@ header {
     align-items: baseline;
 }
 
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
+#menu>li {
+    margin-bottom: 1em;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 0 1rem;
+    left: 0;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
+/* Nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+
 main {
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
@@ -120,48 +165,12 @@ main {
     color: #3a3a3a;
 }
 
-header a {
-    text-decoration: none;
-    color: inherit;
-}
-
-#menu {
-    font-size: 110%;
-    letter-spacing: 4px;
-    list-style-type: none;
-}
-
-#menu>li {
-    margin-bottom: 1em;
-}
-
-.active {
-    border-bottom: 1px solid #3a3a3a;
-}
-
-/* Navbar styles with dropdown toggle */
-nav {
-    position: absolute;
-    background-color: #ffffff;
-    width: 100%;
-    padding: 0 1rem;
-    left: 0;
-    box-shadow: 0 2px 2px #3a3a3a;
-    display: none;
-    top: 100%;
-}
-
-/* Nav toggle */
-#nav-toggle:checked~nav {
-    display: block;
-}
-
-#nav-toggle {
-    display: none;
-}
-
-.nav-toggle-label {
-    font-size: 2rem;
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2 ;
+        column-gap: 0;
+    }
 }
 
 /* Media query: tablets and larger (768px and up) */
@@ -223,6 +232,10 @@ nav {
         text-align: end;
         align-self: flex-end;
     }
+    /* Gallery */
+    #photos {
+        column-count: 3;
+    }
 }
 
 /* Media query: laptop and larger (992px and up) */
@@ -231,6 +244,10 @@ nav {
     /* Menu */
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+    /* Gallery */
+    #photos {
+        column-count: 4;
     }
 }
 
